@@ -6,7 +6,7 @@ module Rekognition
   module Client
     class Base
       
-      attr_accessor :api_key, :api_secret
+      attr_accessor :api_key, :api_secret, :name_space
 
       include Rekognition::Client::Utils
       include Rekognition::Client::Face
@@ -14,8 +14,8 @@ module Rekognition
 
 
       def initialize(opts={})
-        opts.assert_valid_keys(:api_key, :api_secret)
-        @api_key, @api_secret = opts[:api_key], opts[:api_secret]
+        opts.assert_valid_keys(:api_key, :api_secret, :name_space)
+        @api_key, @api_secret, @name_space = opts[:api_key], opts[:api_secret], opts[:name_space]
       end
 
       protected

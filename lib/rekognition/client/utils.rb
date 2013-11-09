@@ -7,7 +7,7 @@ module Rekognition
       API_METHOD =  "http://rekognition.com/func/api/"
 
       def api_credentials
-        { :api_key => api_key, :api_secret => api_secret }
+        { :api_key => api_key, :api_secret => api_secret, :name_space => name_space}
       end
 
       def make_request(opts={})
