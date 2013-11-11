@@ -29,6 +29,11 @@ module Rekognition
         else
           opts = opts.merge(:jobs => method_name)
         end
+        
+        if opts[:tags].is_a?(Array)
+          opts[:tags] = opts[:tags].join(";")
+        end
+        
         make_request(opts)
       end
     end
