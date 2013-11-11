@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Andy Schmidt"]
   s.email       = ["andy@thisislabcoat.com"]
   s.homepage    = "http://thisislabcoat.com"
-  s.summary     = %q{Ruby wraper of Rekognition Face Detection and Recognition API}
-  s.description = %q{}
+  s.summary     = %q{Ruby wrapper of Rekognition Face Detection and Recognition API}
+  s.description = %q{Ruby wrapper of Rekognition Face Detection and Recognition API}
 
 
   s.files         = `git ls-files`.split("\n")
