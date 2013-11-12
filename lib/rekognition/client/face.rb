@@ -55,9 +55,13 @@ module Rekognition
       end
       
       def face_search(opts={})
-        opts.assert_valid_keys(:jobs, :urls, :base64, :user_id, :num_return)
+        opts.assert_valid_keys(:jobs, :urls, :base64, :user_id, :num_return, :tags)
         opts.assert_required_keys([:urls, :base64])
-        compile_jobs_string_and_make_request("face_search", opts)
+        method_name = "face_search"
+        if opts[:tags]
+          method_name = "face_search[#{opts[:tags].join(';')}]"
+        end
+        compile_jobs_string_and_make_request(method_name, opts)
       end
       
       def face_delete(opts={})
