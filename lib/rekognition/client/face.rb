@@ -61,6 +61,8 @@ module Rekognition
         if opts[:tags]
           method_name = "face_search[#{opts[:tags].join(';')}]"
         end
+        p method_name
+        opts.delete(opts[:tags])
         compile_jobs_string_and_make_request(method_name, opts)
       end
       
