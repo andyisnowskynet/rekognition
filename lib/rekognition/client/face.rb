@@ -54,6 +54,12 @@ module Rekognition
         compile_jobs_string_and_make_request("face_vizualize", opts)
       end
       
+      def face_verification(opts={})
+        opts.assert_valid_keys(:jobs, :urls, :base64, :urls_compare, :base64_compare)
+        opts.assert_required_keys([:urls, :base64, :urls_compare, :base64_compare])
+        compile_jobs_string_and_make_request("face_compare", opts)
+      end
+      
       def face_search(opts={})
         opts.assert_valid_keys(:jobs, :urls, :base64, :user_id, :num_return, :tags)
         opts.assert_required_keys([:urls, :base64])
@@ -61,7 +67,6 @@ module Rekognition
         if opts[:tags]
           method_name = "face_search[#{opts[:tags].join(';')}]"
         end
-        p method_name
         opts.delete(opts[:tags])
         compile_jobs_string_and_make_request(method_name, opts)
       end
