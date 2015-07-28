@@ -56,7 +56,7 @@ module Rekognition
       
       def face_verification(opts={})
         opts.assert_valid_keys(:jobs, :urls, :base64, :urls_compare, :base64_compare)
-        opts.assert_required_keys([:urls, :base64, :urls_compare, :base64_compare])
+        opts.assert_required_keys([:urls, :base64], [:urls_compare, :base64_compare])
         compile_jobs_string_and_make_request("face_compare", opts)
       end
       
