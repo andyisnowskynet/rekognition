@@ -36,3 +36,5 @@ face_delete
 face_rename
 face_stats
 scene_understanding
+
+Note: if you pass a :tags hash key into face_train it will use face_train_sync
