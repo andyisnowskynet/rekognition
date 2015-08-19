@@ -22,19 +22,37 @@ Author: Andy Schmidt (andy@thisislabcoat.com)
   
   
 The following methods are available:
+
 face_detect
+
 face_add
+
 face_train
+
 face_train_sync
+
 face_cluster
+
 face_crawl
+
 face_crawl
+
 face_visualize
+
 face_verification
+
 face_search
+
 face_delete
+
 face_rename
+
 face_stats
+
 scene_understanding
 
+
 Note: if you pass a :tags hash key into face_train it will use face_train_sync
+
+
+**Warning**: Using face_train without specifying a tag will train all tags, which could result in a HUGE amount of quota usage. Be careful!
