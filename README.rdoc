@@ -23,33 +23,33 @@ Author: Andy Schmidt (andy@thisislabcoat.com)
   
 The following methods are available:
 
-face_detect
+  face_detect
 
-face_add
+  face_add
 
-face_train
+  face_train
 
-face_train_sync
+  face_train_sync
 
-face_cluster
+  face_cluster
 
-face_crawl
+  face_crawl
 
-face_crawl
+  face_crawl
 
-face_visualize
+  face_visualize
 
-face_verification
+  face_verification
 
-face_search
+  face_search
 
-face_delete
+  face_delete
 
-face_rename
+  face_rename
 
-face_stats
+  face_stats
 
-scene_understanding
+  scene_understanding
 
 
 *Note:* if you pass a :tags hash key into face_train it will use face_train_sync
