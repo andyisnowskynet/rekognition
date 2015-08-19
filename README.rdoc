@@ -13,3 +13,26 @@ Rekognition is a ruby library of Rekognition Face Detection and Recognition API.
 More Documentation refer to https://rekognition.com/developer/docs
 
 Author: Andy Schmidt (andy@thisislabcoat.com)
+
+
+== Usage
+
+  client.face_add(:urls => "http://example.com/image.jpg", :tag => "Jennifer Aniston")
+  client.face_train(:tags => "Jennifer Aniston")
+  
+  
+The following methods are available:
+face_detect
+face_add
+face_train
+face_train_sync
+face_cluster
+face_crawl
+face_crawl
+face_visualize
+face_verification
+face_search
+face_delete
+face_rename
+face_stats
+scene_understanding
