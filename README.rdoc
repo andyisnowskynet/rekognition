@@ -52,7 +52,7 @@ face_stats
 scene_understanding
 
 
-Note: if you pass a :tags hash key into face_train it will use face_train_sync
+*Note:* if you pass a :tags hash key into face_train it will use face_train_sync
 
 
-**Warning**: Using face_train without specifying a tag will train all tags, which could result in a HUGE amount of quota usage. Be careful!
+**WARNING**: Using face_train without specifying a tag will train all tags, which could result in a HUGE amount of quota usage. Be careful!
