@@ -51,7 +51,7 @@ module Rekognition
 
       def face_visualize(opts={})
         opts.assert_valid_keys(:jobs, :user_id, :tags, :num_tag_return, :num_img_return_pertag)
-        compile_jobs_string_and_make_request("face_vizualize", opts)
+        compile_jobs_string_and_make_request("face_visualize", opts)
       end
       
       def face_verification(opts={})
