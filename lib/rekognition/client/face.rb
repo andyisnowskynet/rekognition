@@ -71,6 +71,13 @@ module Rekognition
         compile_jobs_string_and_make_request(method_name, opts)
       end
       
+      def face_inner_search(opts={})
+        opts.assert_valid_keys(:jobs, :query_tag, :img_index, :name_space, :user_id, :num_return)
+        opts.assert_required_keys(:query_tag, :img_index)
+        method_name = "face_inner_search"
+        compile_jobs_string_and_make_request(method_name, opts)
+      end
+      
       def face_delete(opts={})
         opts.assert_valid_keys(:jobs, :user_id, :tag, :img_index)
         compile_jobs_string_and_make_request("face_delete", opts)
